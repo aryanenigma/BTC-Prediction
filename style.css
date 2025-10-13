@@ -1,0 +1,33 @@
+:root{
+  --bg:#0d1117; --panel:#111827;
+  --muted:#94a3b8; --green:#16a34a; --red:#dc2626;
+  --card:#0b1320; --glass:rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter,system-ui,Arial;color:#fff;background:var(--bg)}
+.wrap{max-width:1200px;margin:12px auto;padding:12px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{margin:0;font-size:1.1rem}
+.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.intervals button{margin-right:4px}
+button,select{background:var(--panel);color:#fff;border:0;padding:8px 10px;border-radius:8px;cursor:pointer}
+button.active{outline:2px solid #2563eb}
+#theme-toggle{padding:6px 8px;border-radius:8px}
+#chart{width:100%;height:56vh;border-radius:10px;background:linear-gradient(180deg,#071021, #0b1220);margin-top:12px;box-shadow:0 6px 28px rgba(2,6,23,0.6)}
+main{display:grid;grid-template-columns:1fr 340px;gap:12px;margin-top:12px}
+@media(max-width:1000px){main{grid-template-columns:1fr} .side{order:2}}
+.side{background:var(--glass);padding:12px;border-radius:10px;overflow:auto;max-height:70vh;border:1px solid rgba(255,255,255,0.02)}
+.news-item{padding:12px;border-radius:10px;margin-bottom:8px;color:#fff;text-decoration:none;display:block;transition:transform .12s ease, box-shadow .12s ease}
+.news-item:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(2,6,23,0.6)}
+.profit{margin-top:8px;color:#ffd700;font-weight:600}
+.muted{color:var(--muted);font-size:0.9rem}
+.chart-info{display:flex;gap:12px;align-items:center;margin-top:8px;flex-wrap:wrap}
+.strategy{background:linear-gradient(145deg,#0e1724 0%,#071021 100%);border:1px solid rgba(255,255,255,0.03);border-radius:10px;padding:12px 14px;margin-top:10px;box-shadow:0 6px 18px rgba(3,10,30,0.45)}
+.strategy h3{color:#93c5fd;font-size:1rem;margin:0 0 8px}
+.ai-bar{height:12px;background:rgba(255,255,255,0.06);border-radius:8px;overflow:hidden;margin:8px 0}
+#ai-fill{height:100%;width:0%;background:linear-gradient(90deg,#00ff88,#06b6d4);transition:width .5s ease}
+#ai-text{font-weight:600;margin-top:6px}
+#ai-reason{font-size:0.9rem;opacity:0.9}
+#refresh-ai{background:#111827;color:#fff;border:0;padding:8px 10px;border-radius:8px;cursor:pointer}
+#last-price{font-weight:600}
+input{background:#111827;color:#fff}

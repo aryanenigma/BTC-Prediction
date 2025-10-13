@@ -1,0 +1,94 @@
+<!-- ...existing code... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>💹 BTC Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>💹 BTC Dashboard</h1>
+        <div class="muted">Timezone aligned candles · AI signal · Strategy · S/R lines</div>
+      </div>
+
+      <div class="controls">
+        <div class="intervals">
+          <button data-interval="1m" class="active">1m</button>
+          <button data-interval="5m">5m</button>
+          <button data-interval="10m">10m</button>
+          <button data-interval="15m">15m</button>
+          <button data-interval="30m">30m</button>
+          <button data-interval="1h">1h</button>
+        </div>
+
+        <div style="display:flex;gap:8px;align-items:center">
+          <select id="timezone" title="Display timezone"></select>
+          <button id="theme-toggle" title="Toggle theme">🌙</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <!-- Candlestick Chart -->
+        <div id="chart" aria-label="BTC Chart"></div>
+
+        <div class="chart-info">
+          <div id="last-price" class="muted">Loading price...</div>
+          <div id="trend-breaks" class="muted">Trend Breaks: loading…</div>
+          <div id="profit" class="profit">Potential Profit: $0</div>
+        </div>
+
+        <!-- AI Prediction Box -->
+        <div id="ai-box" class="strategy">
+          <h3>🤖 AI Signal</h3>
+          <div id="ai-content">
+            <div id="ai-bar" class="ai-bar"><div id="ai-fill"></div></div>
+            <div id="ai-text" class="muted">Loading prediction...</div>
+            <div id="ai-reason" style="margin-top:8px;color:#cbd5e1"></div>
+            <div style="margin-top:10px">
+              <button id="refresh-ai">Refresh AI</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- My Custom Strategy -->
+        <div id="strategy-panel" class="strategy">
+          <h3>📊 My Trading Strategy</h3>
+          <div id="strategy-status" class="muted">
+            Waiting for signal...
+        
+
+        <!-- Support & Resistance Control -->
+        <div id="sr-panel" class="strategy">
+          <h3>📈 Support & Resistance</h3>
+          <div class="muted">Auto-detect or set your own levels</div>
+          <div style="margin-top:6px;">
+            <button id="auto-sr">🔍 Auto Detect</button>
+          </div>
+          <div style="margin-top:8px;display:flex;flex-direction:column;gap:6px;">
+            <input type="number" id="manual-support" placeholder="Enter Support Level">
+            <input type="number" id="manual-resistance" placeholder="Enter Resistance Level">
+            <button id="apply-sr">📏 Apply Levels</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="side">
+        <h3>📰 Latest BTC News</h3>
+        <div id="news" aria-live="polite">Loading news…</div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- ...existing code... -->

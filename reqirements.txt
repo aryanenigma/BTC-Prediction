@@ -1,0 +1,10 @@
+requests>=2.31.0
+pandas>=2.1.0
+pytz>=2025.7
+# Python version
+python>=3.11
+
+# Dependencies
+requests>=2.31.0
+pandas>=2.1.0
+pytz>=2025.7
