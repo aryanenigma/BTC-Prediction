@@ -1,41 +1,25 @@
-# 🚀 BTC Dashboard Backend
+# Create README.md and requirements.txt files for download
 
-This is a **Python backend** for a Bitcoin dashboard that provides:  
-
-- Real-time BTC candlestick data from Binance, resampled to any interval and timezone.  
-- Latest Bitcoin news with **simple sentiment analysis**.  
-- Lightweight **AI-based breakout prediction** using a custom heuristic strategy.  
-
-It’s designed for hackathons, prototypes, and personal crypto tools.  
+readme_content = """# 💹 BTC AI Dashboard  
+### AI-Powered Bitcoin Prediction, Strategy Testing & Analytics
 
 ---
 
-## 🔹 Features
-
-1. **Candlestick Data API**  
-   - Endpoint: `/api/candles`  
-   - Query parameters:  
-     - `interval` (default: `1m`) → options: `1m, 5m, 15m, 30m, 1h, 4h, 1d`  
-     - `timezone` (default: `UTC`, or use `auto`)  
-   - Returns OHLCV data aligned to your timezone.  
-
-2. **Bitcoin News API**  
-   - Endpoint: `/api/btc_news`  
-   - Fetches latest Bitcoin and crypto news from Coindesk RSS.  
-   - Returns titles, links, publish date, and a simple sentiment (`positive`, `negative`, `neutral`).  
-
-3. **AI Breakout Prediction API**  
-   - Endpoint: `/api/predict`  
-   - Uses a **lightweight heuristic model** to predict BTC price breakout probability.  
-   - Features used: recent momentum, volatility, volume spikes.  
-   - Returns: probability, label (`bullish`, `bearish`, `neutral`), and explanation.  
+## 🧠 Overview
+The **BTC AI Dashboard** is a full-stack AI project built using **Python (FastAPI)** and **HTML/CSS/JS**.  
+It predicts Bitcoin market movement, tests trading strategies, and visualizes AI insights — all in a beautiful neon-themed interface.
 
 ---
 
-## ⚡ Installation
+## 🚀 Key Features
+| Module | Description |
+|--------|--------------|
+| **Live Dashboard** | Displays live BTC/USDT chart and sentiment forecast. |
+| **Strategy Tester** | Runs your “Smart BTC Breakout” strategy with RSI, EMA21, and daily trade limits. |
+| **Model Analytics** | Visualizes trained model insights — feature importance and sentiment correlation. |
+| **AI Model Training** | Logistic Regression trained on synthetic or real BTC data. |
+| **Auto Analysis** | Generates charts automatically in `/analysis` folder. |
 
-1. Clone the repository:
+---
 
-```bash
-git clone https://github.com/<your-username>/btc-dashboard-backend.git
-cd btc-dashboard-backend
+## 🧩 Project Structure
